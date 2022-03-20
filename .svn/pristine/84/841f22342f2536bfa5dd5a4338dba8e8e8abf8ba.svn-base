@@ -1,0 +1,17 @@
+package app;
+
+import java.util.List;
+
+public interface FibonacciImperative {
+
+  static Long fibonacciAtPosition(int position) {
+    List<Long> values = (List<Long>) List.of(1L, 1L);
+
+    for (int i = 2; i <= position; i++) {
+      values = List.of(values.get(1), values.get(0) + values.get(1));
+    }
+
+    return values.get(1);
+  }
+
+}

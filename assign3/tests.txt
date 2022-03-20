@@ -1,0 +1,19 @@
+x canary test
+
+imperative solution:
+x Fibonacci for position 0
+x Fibonacci for position 1
+x Fibonacci for position 2
+x Fibonacci for position 5
+x Fibonacci for position 10
+x Fibonacci for position 50
+x Fibonacci for position 92
+
+functional solution:
+x Fibonacci for position 0
+x Fibonacci for position 1
+x Fibonacci for position 2
+x Fibonacci for position 5
+x Fibonacci for position 10
+x Fibonacci for position 50
+x Fibonacci for position 92
