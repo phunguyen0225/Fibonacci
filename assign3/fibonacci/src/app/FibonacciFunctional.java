@@ -1,13 +1,15 @@
 package app;
 
 import java.math.BigInteger;
-import java.util.stream.Stream;
+import java.util.List;
+import java.util.stream.IntStream;
 
-public interface FibonacciFunctional {
-  static BigInteger fibonacciAtPosition (int position) {
-    return Stream.iterate(new BigInteger[] {BigInteger.ONE, BigInteger.ONE}, f -> new BigInteger[] { f[1], f[0].add(f[1])})
-      .limit(position)
-      .reduce((a, b) -> b)
-      .get()[1];
+public class FibonacciFunctional implements Fibonacci {
+  @Override
+  public BigInteger fibonacciAtPosition(int position) {
+    return IntStream.range(1, position)
+      .mapToObj(values -> List.of(BigInteger.ONE, BigInteger.ONE))
+      .reduce(List.of(BigInteger.ONE, BigInteger.ONE), (values, ignore) -> List.of(values.get(1), values.get(0).add(values.get(1))))
+      .get(1);
   }
 }
