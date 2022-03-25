@@ -5,4 +5,9 @@ public class SimpleRecursionTest implements FibonacciTest {
   public Fibonacci createFibonacci() {
     return new FibonacciSimpleRecursion();
   }
+
+  @Override
+  public void largeValueTests() {
+    var intention = "bypassing due to slow execution";
+  }
 }
