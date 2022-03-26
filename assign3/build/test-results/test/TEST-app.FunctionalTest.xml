@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="app.FunctionalTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-03-25T22:43:02" hostname="Phus-MBP.attlocal.net" time="0.055">
-  <properties/>
-  <testcase name="canary()" classname="app.FunctionalTest" time="0.035"/>
-  <testcase name="smallValueTests()" classname="app.FunctionalTest" time="0.013"/>
-  <testcase name="largeValueTests()" classname="app.FunctionalTest" time="0.003"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

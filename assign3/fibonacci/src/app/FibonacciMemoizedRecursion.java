@@ -5,18 +5,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FibonacciMemoizedRecursion extends FibonacciSimpleRecursion {
-  private static final Map<Integer, BigInteger> memoizedStorage = new HashMap<>();
+  private final Map<Integer, BigInteger> fibonacciSeries = new HashMap<>();
 
   @Override
   public BigInteger fibonacciAtPosition(int position) {
-    if (memoizedStorage.containsKey(position)) {
-      return memoizedStorage.get(position);
+    if (!fibonacciSeries.containsKey(position)) {
+      fibonacciSeries.put(position, super.fibonacciAtPosition(position));
     }
 
-    BigInteger result = super.fibonacciAtPosition(position);
-
-    memoizedStorage.put(position, result);
-
-    return result;
+    return fibonacciSeries.get(position);
   }
 }
